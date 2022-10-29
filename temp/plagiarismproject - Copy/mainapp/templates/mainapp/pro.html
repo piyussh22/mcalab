@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+</head>
+<body>
+       <h3>main senetence</h3><p>We are  the students of nitt and pursuing masters of computer applications</p>
+       <h3>other sentences</h3>
+      {% for key  in ans.itertuples  %}
+       <p>{{ key.Sentence}} :- {{ key.Similarity_Score  }}</p>
+      {% endfor %}
+    </body>
+</html>

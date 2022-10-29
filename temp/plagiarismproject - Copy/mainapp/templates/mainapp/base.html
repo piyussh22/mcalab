@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plagiarism Detection using ML</title>
+    <link rel="stylesheet" href="{% static 'mainapp/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="classh1"> Plagairism detection using BERT model </h1>
+        <p>This is plagairism detection project based on ML algorithm BERT. This project is developed 
+            under the guidance of Dr Sangeetha Ma'am .
+        </p>
+        <h2>Enter text below </h2>
+        <form id="plagiarismCheckerForm" method="POST" action ="algo/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label id="articleContentLabel" for="originalContent">Original Content</label>
+            <textarea id="articleContentInput" name="originalContent" style="width: 620px;height: 100px; resize: none;" ></textarea>
+            {% comment %} <div><button type="submit" id="submitButton">Submit</button></div> {% endcomment %}
+          {% comment %} </form> {% endcomment %}
+           
+          <label id="articleContentLabel" for="suspiciousContent">Input Content</label>
+          <textarea id="articleContentInput" name="suspiciousContent" style="width: 620px;height: 100px; resize: none;" ></textarea>
+          <div>
+            {% comment %} <button type="submit" id="submitButton">Submit</button></div> {% endcomment %}
+          
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+        </form>
+
+    </div>
+</body>
+</html>
